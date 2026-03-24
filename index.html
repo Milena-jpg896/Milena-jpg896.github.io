@@ -76,25 +76,35 @@
 @media(max-width: 768px) {
   .menu-toggle { display: block; }
   .menu {
-    display: none; flex-direction: column; position: absolute; top: 100%; left: 0; 
-    width: 100%; background: var(--white); padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: none; 
+    flex-direction: column; 
+    position: absolute; 
+    top: 100%; left: 0; 
+    width: 100%; 
+    background: var(--white); 
+    padding: 30px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
   .menu.active { display: flex; }
   .menu a { margin: 15px 0; font-size: 1.1rem; margin-left: 0; text-align: center; }
   
-  /* AQUI É ONDE A MÁGICA ACONTECE */
+  /* AQUI A MÁGICA DA FOTO MOBILE */
   header {
-    height: 50vh !important; /* Diminuí um pouco a altura para a foto não esticar tanto */
-      padding-top: 30px;
-
-    background-size: contain !important;
+    height: 60vh !important; /* Altura boa para mobile */
+    padding-top: 30px;
+    
+    /* TROQUE 'foto-mobile.jpg' PELO NOME DA FOTO VERTICAL DELA */
+    background-image: linear-gradient(var(--overlay), var(--overlay)), url('Imagens/Milenaa-mobile.jpg') !important;
+    
+    background-size: cover !important; /* Faz a foto preencher todo o espaço sem sobrar fundo */
     background-position: center center !important;
-    background-repeat: no-repeat;
-}
+    background-repeat: no-repeat !important;
+  }
 
   section { padding: 60px 5%; }
   .gallery img { height: 370px; }
 }
+    
     
   </style>
 </head>
