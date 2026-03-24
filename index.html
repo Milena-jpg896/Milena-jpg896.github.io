@@ -1,18 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Millenna Makeup | Estética & Beleza</title>
-  <link rel="stylesheet" href="Style.css">
   <link href="https://fonts.googleapis.com" rel="stylesheet">
-  
 </head>
 <body>
 
 <nav>
   <div class="logo">Millenna<span>Makeup</span></div>
-  <div class="menu">
+  
+  <!-- ADICIONADO: Botão do Menu para Celular -->
+  <div class="menu-toggle" id="mobile-menu">☰</div>
+  
+  <!-- ADICIONADO: ID nav-list para o Script encontrar o menu -->
+  <div class="menu" id="nav-list">
     <a href="#home">Início</a>
     <a href="#servicos">Serviços</a>
     <a href="#galeria">Trabalhos</a>
@@ -25,7 +29,9 @@
   <p>ESPECIALISTA EM BELEZA</p>
   <h1>Millenna Makeup</h1>
   <p>Realçando sua melhor versão todos os dias.</p>
-  <a href="https://wa.me" class="btn-pink">Agendar Agora</a>
+  <a href="https://wa.me/244925333460?text=Olá,%20quero%20agendar%20um%20serviço" class="btn-pink">
+    Agendar Agora
+  </a>
 </header>
 
 <section id="servicos">
@@ -40,7 +46,6 @@
 <section id="galeria" style="background: #fff;">
   <h2>Minha Galeria</h2>
   <div class="gallery">
-    <!-- Coloque aqui as fotos dos trabalhos dela -->
     <img src="/Imagens/salão.jpg" alt="Trabalho 1">
     <img src="/Imagens/salão1.jpg" alt="Trabalho 2">
     <img src="/Imagens/salão2.jpg" alt="Trabalho 3">
@@ -66,6 +71,23 @@
   <p style="margin-top:20px; font-size: 0.9rem; opacity: 0.7;">© 2026 - Desenvolvido com ❤️ para Millenna</p>
 </footer>
 
+<!-- ADICIONADO: Script para o Menu funcionar -->
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navList = document.getElementById('nav-list');
+
+  mobileMenu.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+
+  // Fecha o menu ao clicar em um link
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('active');
+    });
+  });
+</script>
+
 </body>
-  </html>
-  
+</html>
+
