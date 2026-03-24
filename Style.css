@@ -25,7 +25,7 @@
     header { 
       height: 77vh; 
       /* Substitua 'foto.jpg' pela imagem dela */
-      background: linear-gradient(rgba(255, 77, 166, 0.3), rgba(0, 0, 0, 0.6)), url('millena.jpg'); 
+      background: linear-gradient(rgba(255, 77, 166, 0.3), rgba(0, 0, 0, 0.6)), url(' https://github.com/Milena-jpg896/Milena-jpg896.github.io/blob/ae02ea129e44823159b668b20a75aff9bf880df2/millena.jpg'); 
       background-size: cover; background-position: center; background-attachment: scroll; 
       display: flex; flex-direction: column; justify-content: center; align-items: center;
       color: white; text-align: center; padding: 0 20px;
